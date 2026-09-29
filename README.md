@@ -23,3 +23,10 @@ The main trade-off is that `performance.now()` is only available in environments
 ## Edge cases
 
 Calling `measure` with a mark name that has not been recorded throws an error. Mark names are case-sensitive, and marking the same name twice overwrites the previous timestamp.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
