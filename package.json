@@ -1,6 +1,6 @@
 {
   "name": "high-resolution-timer",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Provides a monotonic clock that measures elapsed time between marked events using performance.now, immune to system clock adjustments.",
   "type": "module",
   "main": "src/index.js",
